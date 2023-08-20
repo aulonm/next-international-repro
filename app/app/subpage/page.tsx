@@ -1,4 +1,4 @@
-import { getI18n } from "../../../../locales/app/server";
+import { getI18n } from "../../../locales/app/server";
 
 export default async function Subpage() {
   const t = await getI18n();

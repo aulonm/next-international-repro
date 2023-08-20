@@ -1,6 +1,6 @@
 "use client";
 
-import { useI18n, useScopedI18n } from "../../../../locales/app/client";
+import { useI18n, useScopedI18n } from "../../../locales/app/client";
 
 export default function Client() {
   const t = useI18n();

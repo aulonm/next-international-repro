@@ -1,4 +1,4 @@
-import { getI18n, getScopedI18n } from "../../../locales/app/server";
+import { getI18n, getScopedI18n } from "../../locales/app/server";
 
 // Only needed for SSG
 // export const generateStaticParams = getStaticParams();

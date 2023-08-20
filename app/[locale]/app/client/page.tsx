@@ -1,27 +1,14 @@
 "use client";
 
-import {
-  useI18n,
-  useScopedI18n,
-  useChangeLocale,
-  useCurrentLocale,
-} from "../../../locales/app/client";
+import { useI18n, useScopedI18n } from "../../../../locales/app/client";
 
 export default function Client() {
   const t = useI18n();
-  const changeLocale = useChangeLocale({
-    // basePath: '/base',
-  });
   const t2 = useScopedI18n("scope.more");
-  const locale = useCurrentLocale();
 
   return (
     <div>
       <h1>CSR</h1>
-      <p>
-        Current locale:
-        <span>{locale}</span>
-      </p>
       <p>Hello: {t("hello")}</p>
       <p>
         Hello:{" "}
@@ -82,12 +69,6 @@ export default function Client() {
           count: 2,
         })}
       </p>
-      <button type="button" onClick={() => changeLocale("en")}>
-        EN
-      </button>
-      <button type="button" onClick={() => changeLocale("fr")}>
-        FR
-      </button>
     </div>
   );
 }

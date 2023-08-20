@@ -1,4 +1,4 @@
-import { getI18n } from '../../../locales/app/server';
+import { getI18n } from "../../../../locales/app/server";
 
 export default async function Subpage() {
   const t = await getI18n();
@@ -6,7 +6,7 @@ export default async function Subpage() {
   return (
     <div>
       <h1>SSR / SSG</h1>
-      <p>Hello: {t('hello')}</p>
+      <p>Hello: {t("hello")}</p>
     </div>
   );
 }

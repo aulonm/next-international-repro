@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import "./globals.css";
-import { Switch } from "./switch";
 import Link from "next/link";
 
 export const metadata = {
@@ -12,7 +11,6 @@ export default function RootLayout({ children }: { children: ReactElement }) {
   return (
     <html lang="en">
       <body>
-        <Switch />
         <ul>
           <li>
             <Link href="/">Go to /</Link>

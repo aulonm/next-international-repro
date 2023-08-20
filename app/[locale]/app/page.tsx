@@ -1,14 +1,15 @@
-// pages/index.ts
-import { useI18n, useScopedI18n } from "../locales/pages";
+import { getI18n, getScopedI18n } from "../../../locales/app/server";
 
-export default function Page() {
-  const t = useI18n();
-  const t2 = useScopedI18n("scope.more");
+// Only needed for SSG
+// export const generateStaticParams = getStaticParams();
+
+export default async function Home() {
+  const t = await getI18n();
+  const t2 = await getScopedI18n("scope.more");
 
   return (
     <div>
-      <h1>CSR</h1>
-      <p></p>
+      <h1>SSR / SSG</h1>
       <p>Hello: {t("hello")}</p>
       <p>
         Hello:{" "}

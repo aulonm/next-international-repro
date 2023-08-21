@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { I18nProviderClient } from "../../../locales/app/client";
-import en from "../../../locales/app/en";
+import en from "../../../locales/en";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

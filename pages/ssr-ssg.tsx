@@ -1,14 +1,27 @@
-// pages/index.ts
-import { useI18n, useScopedI18n } from "../locales/pages";
+import { GetServerSideProps } from "next";
+import {
+  getLocaleProps,
+  useChangeLocale,
+  useCurrentLocale,
+  useI18n,
+  useScopedI18n,
+} from "../locales/pages";
 
-export default function Page() {
+export const getServerSideProps: GetServerSideProps = getLocaleProps();
+// export const getStaticProps: GetStaticProps = getLocaleProps();
+
+export default function SSR() {
   const t = useI18n();
+  const changeLocale = useChangeLocale();
   const t2 = useScopedI18n("scope.more");
+  const locale = useCurrentLocale();
 
   return (
     <div>
-      <h1>ROOT PAGES</h1>
-      <p></p>
+      <h1>PAGES SSR / SSG</h1>
+      <p>
+        Current locale: <span>{locale}</span>
+      </p>
       <p>Hello: {t("hello")}</p>
       <p>
         Hello:{" "}
@@ -29,22 +42,10 @@ export default function Page() {
           name: "Doe",
         })}
       </p>
-      <p>
-        Hello (with React components):{" "}
-        {t("about.you", {
-          age: <strong>23</strong>,
-          name: "Doe",
-        })}
-      </p>
       <p>{t2("test")}</p>
       <p>
         {t2("param", {
           param: "test",
-        })}
-      </p>
-      <p>
-        {t2("param", {
-          param: <strong>test</strong>,
         })}
       </p>
       <p>{t2("and.more.test")}</p>
@@ -69,6 +70,9 @@ export default function Page() {
           count: 2,
         })}
       </p>
+      <button type="button" onClick={() => changeLocale("en")}>
+        EN
+      </button>
     </div>
   );
 }

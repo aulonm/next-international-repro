@@ -1,24 +1,15 @@
-"use client";
+import { getI18n, getScopedI18n } from "../../locales/app/server";
 
-import {
-  useI18n,
-  useScopedI18n,
-  useChangeLocale,
-  useCurrentLocale,
-} from "../../../locales/app/client";
+// Only needed for SSG
+// export const generateStaticParams = getStaticParams();
 
-export default function Client() {
-  const t = useI18n();
-  const t2 = useScopedI18n("scope.more");
-  const locale = useCurrentLocale();
+export default async function Home() {
+  const t = await getI18n();
+  const t2 = await getScopedI18n("scope.more");
 
   return (
     <div>
-      <h1>CSR</h1>
-      <p>
-        Current locale:
-        <span>{locale}</span>
-      </p>
+      <h1>APP-dir</h1>
       <p>Hello: {t("hello")}</p>
       <p>
         Hello:{" "}

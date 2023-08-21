@@ -7,7 +7,7 @@ export default function Page() {
 
   return (
     <div>
-      <h1>CSR</h1>
+      <h1>ROOT PAGES</h1>
       <p></p>
       <p>Hello: {t("hello")}</p>
       <p>

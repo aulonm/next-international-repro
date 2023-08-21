@@ -8,7 +8,7 @@ export default function Client() {
 
   return (
     <div>
-      <h1>CSR</h1>
+      <h1>ClIENT</h1>
       <p>Hello: {t("hello")}</p>
       <p>
         Hello:{" "}

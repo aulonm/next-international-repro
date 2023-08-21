@@ -16,10 +16,10 @@ export default function RootLayout({ children }: { children: ReactElement }) {
             <Link href="/">Go to /</Link>
           </li>
           <li>
-            <Link href="/app/subpage">Go to /subpage</Link>
+            <Link href="/subpage">Go to /subpage</Link>
           </li>
           <li>
-            <Link href="/app/client">Go to /client</Link>
+            <Link href="/client">Go to /client</Link>
           </li>
         </ul>
         {children}

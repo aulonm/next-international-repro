@@ -1,5 +1,5 @@
 import { I18nProvider } from "@/locales/pages";
-import en from "@/locales/pages/en";
+import en from "@/locales/en";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 

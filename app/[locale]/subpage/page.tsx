@@ -5,7 +5,7 @@ export default async function Subpage() {
 
   return (
     <div>
-      <h1>SSR / SSG</h1>
+      <h1>SERVER</h1>
       <p>Hello: {t("hello")}</p>
     </div>
   );
